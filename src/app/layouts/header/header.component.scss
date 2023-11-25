@@ -1,4 +1,5 @@
 @import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/tools/media';
 
 .header {
     position: fixed;
@@ -15,5 +16,17 @@
         display: flex;
         justify-content: space-between;
         gap: 0 rem(20px);
+    }
+
+    @include mq(l, max) {
+        pizza-nav {
+            display: none;
+        }
+    }
+
+    @include mq(l) {
+        pizza-mobile {
+            display: none;
+        }
     }
 }

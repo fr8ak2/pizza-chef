@@ -1,4 +1,5 @@
 @import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/tools/media';
 
 :host {
     display: flex;
@@ -8,6 +9,7 @@
 }
 
 .menu {
+    
     &__items {
         display: flex;
         align-items: center;

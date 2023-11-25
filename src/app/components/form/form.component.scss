@@ -54,6 +54,8 @@
     }
 
     &__button {
+        font-weight: bold;
+        font-size: rem(18px);
         width: 100%;
         color: var(--brown);
     }
