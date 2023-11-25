@@ -1,0 +1,70 @@
+@import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/tools/media';
+
+.footer {
+    padding: rems(120px 0 46px);
+
+    @include mq(s) {
+        padding: rems(240px 0 105px);
+    }
+
+    &__inner {
+        display: flex;
+        flex-flow: column;
+
+        @include mq(xl) {
+            flex-flow: row;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        gap: 6.6vw;
+        flex: 1;
+
+        @include mq(m) {
+            align-items: flex-start;
+            flex-flow: row;
+        }
+
+        @include mq(xl) {
+            align-items: flex-end;
+        }
+    }
+
+    &__info {
+        flex: 1;
+
+        @include mq(xl) {
+            flex: 0 1 40%;
+        }
+    }
+
+    &__form {
+        flex: 1;
+
+        @include mq(xl) {
+            flex: 0 1 40%;
+        }
+    }
+
+    &__title {
+        margin: 0 0 rem(64px);
+    }
+
+    .text {
+        color: var(--orange-d);
+        line-height: 1.5;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        margin: rem(60px) 0 0;
+
+        @include mq(xl) {
+            margin: 0 -10vw -2vw 0;
+        }
+    }
+}

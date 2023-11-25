@@ -1,0 +1,13 @@
+@import '../../../resources/scss/settings/config';
+
+:host {
+    &.text {
+        &.--small {
+            font-size: rem(14px);
+        }
+
+        &.--big {
+            font-size: rem(18px);
+        }
+    }
+}

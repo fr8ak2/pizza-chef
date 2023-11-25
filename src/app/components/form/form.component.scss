@@ -1,0 +1,72 @@
+@import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/settings/config.eases';
+
+.form {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 24px 0;
+
+    &__group {
+        display: flex;
+        flex-flow: column;
+    }
+
+    label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__input {
+        width: 100%;
+        height: rem(60px);
+        padding: 0 rem(22px);
+        border: 1px solid var(--orange-d);
+        transition: border 0.45s $ease-out;
+        outline: 0;
+
+        &::placeholder {
+            font-size: rem(18px);
+            color: var(--orange-d);
+        }
+
+        &.ng-invalid.ng-touched {
+            border: 1px solid var(--red);
+            transition: border 0.45s $ease-in;
+
+            &::placeholder {
+                color: var(--red);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__error {
+        font-size: rem(14px);
+        color: var(--red);
+        margin: rem(6px) 0 0;
+    }
+
+    &__button {
+        width: 100%;
+        color: var(--brown);
+    }
+}
+
+.message {
+    text-align: center;
+
+    .title {
+        margin: 0 0 rem(24px);
+    }
+
+    span {
+        display: block;
+    }
+}

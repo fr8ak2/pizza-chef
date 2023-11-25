@@ -1,0 +1,15 @@
+@import '../../../resources/scss/settings/config';
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0 rem(8px);
+
+    > span {
+        font-family: $font-secondary;
+        font-size: rem(24px);
+        color: var(--orange-l);
+        letter-spacing: rem(2px);
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,29 @@
+<div class="benefits">
+    <div class="benefits__list">
+        <div class="benefits__item" *ngFor="let benefit of benefits">
+            <div class="benefits__item-icon">
+                <pizza-pic
+                    [config]="{
+                        path: benefit?.icon || '',
+                        width: benefit.width,
+                        height: benefit.height,
+                        alt: benefit?.title,
+                        lazy: picLoadingState
+                    }" />
+            </div>
+            <div class="benefits__item-content">
+                <pizza-title
+                    [config]="{
+                        heading: headingVariants,
+                        sizes: headingSizes,
+                        customClass: headingCustomClass,
+                        title: benefit?.title
+                    }" />
+                <pizza-text
+                    [config]="{
+                        content: benefit?.text
+                    }" />
+            </div>
+        </div>
+    </div>
+</div>

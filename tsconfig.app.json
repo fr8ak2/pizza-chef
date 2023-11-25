@@ -1,14 +1,27 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "types": []
-  },
-  "files": [
-    "src/main.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "outDir": "./out-tsc/app",
+        "types": [],
+        "target": "ESNext",
+        "module": "ESNext",
+        "lib": ["ESNext", "dom", "dom.iterable"],
+        "paths": {
+            "@app/*": ["src/app/*"],
+            "@components/*": ["src/app/components/*"],
+            "@data/*": ["src/app/data/*"],
+            "@directives/*": ["src/app/directives/*"],
+            "@layouts/*": ["src/app/layouts/*"],
+            "@models/*": ["src/app/models/*"],
+            "@pages/*": ["src/app/pages/*"],
+            "@services/*": ["src/app/services/*"],
+            "@shared/*": ["src/app/shared/*"],
+            "@assets/*": ["src/assets/*"]
+        }
+    },
+    "files": ["src/main.ts"],
+    "include": ["src/**/*.d.ts", "src/**/*.d.tsx"],
+    "exclude": ["node_modules"]
 }

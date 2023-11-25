@@ -1,0 +1,53 @@
+:root {
+    @if $enable-smooth-scroll {
+        @media (prefers-reduced-motion: no-preference) {
+            scroll-behavior: smooth;
+        }
+    }
+
+    --white: #{$white};
+    --black: #{$black};
+    --black-d: #{$black-d};
+    --orange: #{$orange};
+    --orange-d: #{$orange-m};
+    --orange-l: #{$orange-l};
+    --orange-t: #{$orange-t};
+    --brown: #{$brown};
+    --red: #{$red};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100vw;
+    min-height: 100%;
+    overscroll-behavior: none;
+}
+
+html {
+    @include tap-highlight-color;
+    @include overflow-scrolling;
+    @include text-size-adjust;
+}
+
+body {
+    position: relative;
+    font-family: $base-font-family;
+    font-weight: $normal;
+    font-size: $base-font-size;
+    color: var(--black);
+    background: var(--white);
+    line-height: lh(16px, 20px);
+    @include font-smoothing;
+    @include text-rendering;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}

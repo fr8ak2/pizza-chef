@@ -1,0 +1,36 @@
+<footer id="delivery-payment" class="footer">
+    <pizza-wrapper>
+        <div class="footer__inner">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <pizza-title
+                        [config]="{
+                            heading: 'h2',
+                            customClass: 'footer__title',
+                            modsClass: '--colored-reverse',
+                            title: title
+                        }" />
+
+                    <pizza-text
+                        [config]="{
+                            content: text
+                        }" />
+                </div>
+
+                <div class="footer__form">
+                    <pizza-form />
+                </div>
+            </div>
+            <div class="footer__img">
+                <pizza-pic
+                    [config]="{
+                        path: pic.tasty || '',
+                        width: 410,
+                        height: 454,
+                        alt: 'Хватит думать! Доставим заказ за 30 минут!',
+                        lazy: 'lazy'
+                    }" />
+            </div>
+        </div>
+    </pizza-wrapper>
+</footer>

@@ -1,0 +1,18 @@
+<header class="header">
+    <pizza-wrapper>
+        <pizza-logo
+            [config]="{
+                pic: {
+                    path: img.logo,
+                    width: 68,
+                    height: 68,
+                    alt: 'Pizza Cheff',
+                    lazy: 'eager'
+                },
+                title: 'Pizza <br/> Cheff'
+            }" />
+
+        <pizza-nav [navItems]="menu" />
+        <pizza-mobile [navMobileItems]="menu" />
+    </pizza-wrapper>
+</header>

@@ -1,0 +1,18 @@
+@import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/tools/media';
+
+.products {
+    padding: rem(80px) 0 0;
+
+    @include mq(s) {
+        padding: rem(160px) 0 0;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-weight: bold;
+        color: var(--orange-t);
+        margin: 0 0 rem(60px);
+        text-align: center;
+    }
+}

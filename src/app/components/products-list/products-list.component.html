@@ -1,0 +1,45 @@
+<div class="products__list">
+    <div class="products__item" *ngFor="let product of products" [attr.data-id]="product.id">
+        <div class="products__item-img">
+            <pizza-pic
+                [config]="{
+                    path: product?.pic || '',
+                    width: product?.width,
+                    height: product?.height,
+                    alt: product?.title,
+                    lazy: picLoadingState
+                }" />
+        </div>
+
+        <div class="products__item-inner">
+            <div class="products__item-content">
+                <div class="products__item-title">
+                    <pizza-title
+                        [config]="{
+                            heading: headingVariants,
+                            sizes: headingSizes,
+                            title: product.title,
+                            customClass: headingCustomClass
+                        }" />
+                </div>
+
+                <div class="products__item-desc">
+                    <pizza-text
+                        [config]="{
+                            content: product?.desc
+                        }" />
+                </div>
+            </div>
+
+            <div class="products__item-button">
+                <pizza-button
+                    [config]="{
+                        title: 'В корзину',
+                        link: '#',
+                        variants: '--small',
+                        role: 'button'
+                    }" />
+            </div>
+        </div>
+    </div>
+</div>

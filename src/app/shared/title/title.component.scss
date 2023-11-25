@@ -1,0 +1,13 @@
+.--colored {
+    > span {
+        color: var(--orange);
+    }
+
+    &-reverse {
+        color: var(--orange);
+
+        > span {
+            color: var(--orange-d);
+        }
+    }
+}

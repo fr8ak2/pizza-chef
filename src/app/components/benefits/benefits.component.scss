@@ -1,0 +1,33 @@
+@import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/tools/media';
+
+.benefits {
+    position: relative;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(#{rem(282px)}, 1fr));
+        grid-gap: rem(46px);
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: rems(0 16px);
+
+        &-icon {
+            img {
+                max-width: none;
+            }
+        }
+    }
+
+    h2 {
+        color: var(--orange);
+        text-transform: uppercase;
+    }
+
+    .text {
+        color: var(--orange-d);
+    }
+}

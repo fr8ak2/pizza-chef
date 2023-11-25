@@ -1,0 +1,68 @@
+import { ProductsListModel } from '@models/products-list.model';
+
+export const PRODUCT_DATA: ProductsListModel[] = [
+    {
+        id: 0,
+        pic: 'assets/images/products/meet-delux.png',
+        width: 214,
+        height: 152,
+        title: 'Мясная Делюкс',
+        desc: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы',
+    },
+    {
+        id: 1,
+        pic: 'assets/images/products/sea-premium.png',
+        width: 203,
+        height: 143,
+        title: 'Морская Премиум',
+        desc: 'Перец, сыр, креветки, кальмары, мидии, лосось',
+    },
+    {
+        id: 2,
+        pic: 'assets/images/products/bacon-sausages.png',
+        width: 240,
+        height: 155,
+        title: 'Бекон и Сосиски',
+        desc: 'Бекон, сыр, сосиски, ананас, томатная паста',
+    },
+    {
+        id: 3,
+        pic: 'assets/images/products/chicken-delux.png',
+        width: 224,
+        height: 154,
+        title: 'Куриная Делюкс',
+        desc: 'Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста',
+    },
+    {
+        id: 4,
+        pic: 'assets/images/products/bbq-premium.png',
+        width: 214,
+        height: 153,
+        title: 'Барбекю Премиум',
+        desc: 'Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чили',
+    },
+    {
+        id: 5,
+        pic: 'assets/images/products/pepperoni-double.png',
+        width: 214,
+        height: 143,
+        title: 'Пепперони Дабл',
+        desc: 'Пепперони, сыр, колбаса 2 видов: обжаренная и вареная',
+    },
+    {
+        id: 6,
+        pic: 'assets/images/products/chicken-trio.png',
+        width: 214,
+        height: 152,
+        title: 'Куриное трио',
+        desc: 'Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, грибы, соус для пиццы',
+    },
+    {
+        id: 7,
+        pic: 'assets/images/products/cheese.png',
+        width: 203,
+        height: 142,
+        title: 'Сырная',
+        desc: 'Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный',
+    },
+];

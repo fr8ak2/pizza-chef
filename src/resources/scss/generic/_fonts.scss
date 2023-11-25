@@ -1,0 +1,5 @@
+@include font-face('Muller', 'fonts/MullerRegular', ('woff', 'woff2'));
+@include font-face('Muller', 'fonts/MullerBold', ('woff', 'woff2'), bold);
+@include font-face('Muller', 'fonts/MullerExtraBold', ('woff', 'woff2'), 800);
+@include font-face('Muller Black', 'fonts/MullerBlack', ('woff', 'woff2'), 900);
+@include font-face('Muller Heavy', 'fonts/MullerHeavy', ('woff', 'woff2'), 900);

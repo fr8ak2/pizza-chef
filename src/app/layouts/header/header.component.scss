@@ -1,0 +1,19 @@
+@import '../../../resources/scss/settings/config';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(100px);
+    padding: rem(16px) 0;
+    background: var(--white);
+    z-index: 21;
+    box-shadow: rems(0 3px 14px 1.2px) rgba(152, 152, 152, 0.2);
+
+    pizza-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 rem(20px);
+    }
+}

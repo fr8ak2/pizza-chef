@@ -1,0 +1,26 @@
+@import '../../../resources/scss/settings/config';
+@import '../../../resources/scss/settings/config.eases';
+
+button,
+a[role='button'] {
+    font-family: $font-primary;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(224px);
+    height: rem(60px);
+    color: var(--black);
+    background: var(--orange);
+    border: 1px transparent solid;
+    cursor: pointer;
+    transition: background 0.45s $ease;
+
+    &:hover {
+        background: var(--orange-l);
+    }
+
+    &.--small {
+        height: rem(50px);
+    }
+}

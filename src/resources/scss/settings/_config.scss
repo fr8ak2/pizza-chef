@@ -1,0 +1,44 @@
+@use 'sass:math';
+@import '../../scss/tools/functions';
+
+// Path is relative to the stylesheets directory.
+$assets-path: 'assets/' !default;
+
+// Base
+$base-font-family: 'Muller', sans-serif;
+$base-font-size: 16px;
+
+// Family
+$font-primary: 'Muller', sans-serif;
+$font-secondary: 'Muller Black', sans-serif;
+$font-ternary: 'Muller Heavy', sans-serif;
+
+// Headings
+$font-size-h1: 46px !default;
+$font-size-h2: 36px !default;
+$font-size-h3: 26px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 16px !default;
+$font-size-h6: 14px !default;
+
+// Weights
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// Transitions
+$speed: 0.45s;
+
+// Spacing Units
+$unit: rem(20px);
+
+// Container
+$container-width: calc(#{rem(1200px)} + #{$unit * 2});
+$padding: $unit;
+
+// Options
+$enable-smooth-scroll: true !default;

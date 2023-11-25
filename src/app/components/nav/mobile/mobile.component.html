@@ -1,0 +1,16 @@
+<div class="menu__burger" (click)="toggleMenu()" role="presentation">
+    <div class="menu__burger-line"></div>
+    <div class="menu__burger-line"></div>
+    <div class="menu__burger-line"></div>
+</div>
+
+<div class="menu__mobile" *ngIf="isMenuOpen">
+    <div class="menu__close" (click)="toggleMenu()" role="presentation">
+        <div class="menu__close-line"></div>
+        <div class="menu__close-line"></div>
+    </div>
+
+    <div class="menu__mobile-nav">
+        <pizza-nav [navItems]="navMobileItems" />
+    </div>
+</div>

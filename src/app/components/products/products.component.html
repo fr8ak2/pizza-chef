@@ -1,0 +1,16 @@
+<section id="pizzas" class="products">
+    <pizza-wrapper>
+        <pizza-title
+            [config]="{
+                heading: 'h2',
+                title: 'Выберите свою любимую пиццу',
+                customClass: 'products__title'
+            }" />
+
+        <pizza-products-list
+            [products]="products"
+            [headingVariants]="'h3'"
+            [headingSizes]="'--h4'"
+            [picLoadingState]="'lazy'" />
+    </pizza-wrapper>
+</section>

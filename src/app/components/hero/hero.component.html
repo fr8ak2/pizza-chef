@@ -1,0 +1,40 @@
+<section class="hero">
+    <pizza-wrapper>
+        <div class="hero__inner">
+            <div class="hero__content">
+                <pizza-title
+                    [config]="{
+                        heading: 'h1',
+                        customClass: 'hero__title',
+                        modsClass: '--colored',
+                        title: title
+                    }" />
+
+                <pizza-benefits
+                    [benefits]="benefits"
+                    [headingVariants]="'h2'"
+                    [headingSizes]="'--h5'"
+                    [picLoadingState]="'eager'" />
+
+                <pizza-button
+                    [config]="{
+                        title: 'Выбрать пиццу',
+                        link: 'pizzas',
+                        customClass: 'hero__button',
+                        role: 'button'
+                    }" />
+            </div>
+
+            <div class="hero__img">
+                <pizza-pic
+                    [config]="{
+                        path: pic.hero,
+                        width: 520,
+                        height: 342,
+                        alt: 'Самая вкусная пицца в мире только в Pizza Cheff',
+                        lazy: 'eager'
+                    }" />
+            </div>
+        </div>
+    </pizza-wrapper>
+</section>

@@ -1,0 +1,68 @@
+<form class="form" [formGroup]="form" #cForm="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <div class="form__group">
+        <label for="name">Ваше имя:</label>
+        <input
+            id="name"
+            class="form__input"
+            formControlName="name"
+            placeholder="Ваше имя"
+            (keydown.dot)="focusDotInput($event)"
+            type="text"
+            required />
+
+        <div
+            *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+            class="form__error {{ name?.errors ? ' --active' : '' }}">
+            <div *ngIf="name?.errors?.['required']">Введите свое имя</div>
+            <div *ngIf="name?.errors?.['minlength']">Имя должно содержать не менее 3 символов</div>
+            <div *ngIf="name?.errors?.['pattern']">Имя не может содержать '.' (точку)</div>
+        </div>
+    </div>
+
+    <div class="form__group">
+        <label for="address">Адрес доставки:</label>
+        <input
+            id="address"
+            class="form__input"
+            formControlName="address"
+            placeholder="Адрес доставки"
+            type="text"
+            required />
+
+        <div *ngIf="address?.invalid && address?.touched" class="form__error">
+            <div *ngIf="address?.errors?.['required']">Введите свой аддрес</div>
+        </div>
+    </div>
+
+    <div class="form__group">
+        <label for="phone">Телефон:</label>
+        <input id="phone" class="form__input" formControlName="phone" placeholder="Телефон" type="text" required />
+
+        <div *ngIf="phone?.invalid && phone?.touched" class="form__error">
+            <div *ngIf="phone?.errors?.['required']">Введите свой номер телефона</div>
+            <div *ngIf="phone?.errors?.['pattern']">Телефон может содержать только цифры и код страны</div>
+        </div>
+    </div>
+
+    <button class="form__button" [disabled]="form.invalid" type="submit">Оформить заказ</button>
+</form>
+
+<pizza-modal id="form">
+    <div class="message" *ngIf="cForm.submitted">
+        <pizza-title
+            [config]="{
+                heading: 'h2',
+                title: successTitle
+            }" />
+
+        <pizza-text
+            [config]="{
+                content: 'Спасибо за ваш заказ.'
+            }" />
+
+        <pizza-text
+            [config]="{
+                content: 'Вы с вами свяжемся в ближаейшее время.'
+            }" />
+    </div>
+</pizza-modal>

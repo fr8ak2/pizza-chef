@@ -1,0 +1,7 @@
+<a
+    [href]="config?.link"
+    [ngClass]="['button'] + ' ' + [config?.customClass || ''] + ' ' + [config?.variants || '']"
+    [attr.role]="config?.role"
+    (click)="scrollTo(config?.link, $event)">
+    <span>{{ config?.title }}</span>
+</a>
