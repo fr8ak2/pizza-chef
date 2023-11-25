@@ -7,19 +7,7 @@
         "types": [],
         "target": "ESNext",
         "module": "ESNext",
-        "lib": ["ESNext", "dom", "dom.iterable"],
-        "paths": {
-            "@app/*": ["src/app/*"],
-            "@components/*": ["src/app/components/*"],
-            "@data/*": ["src/app/data/*"],
-            "@directives/*": ["src/app/directives/*"],
-            "@layouts/*": ["src/app/layouts/*"],
-            "@models/*": ["src/app/models/*"],
-            "@pages/*": ["src/app/pages/*"],
-            "@services/*": ["src/app/services/*"],
-            "@shared/*": ["src/app/shared/*"],
-            "@assets/*": ["src/assets/*"]
-        }
+        "lib": ["ESNext", "dom", "dom.iterable"]
     },
     "files": ["src/main.ts"],
     "include": ["src/**/*.d.ts", "src/**/*.d.tsx"],
