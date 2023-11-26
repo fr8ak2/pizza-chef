@@ -28,8 +28,8 @@ export class ModalComponent implements OnInit, OnDestroy {
 
         document.body.appendChild(this.element);
 
-        this.element.addEventListener('click', (el: any) => {
-            if (el.target.className === 'popup') {
+        this.element.addEventListener('click', (e: { target: Element }) => {
+            if (e.target.className === 'popup') {
                 this.close();
             }
         });

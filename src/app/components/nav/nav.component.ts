@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavModel } from '@models/models';
+import { NavService } from '@services/nav.service';
 
 @Component({
     selector: 'pizza-nav',
@@ -12,12 +13,9 @@ import { NavModel } from '@models/models';
 export class NavComponent {
     @Input() navItems: NavModel[] = [];
 
-    scrollTo(id: string | undefined, e: Event) {
-        e.preventDefault();
+    constructor(protected navService: NavService) {}
 
-        if (typeof id === 'string') {
-            const target = document.getElementById(id);
-            target ? target.scrollIntoView({ behavior: 'smooth' }) : null;
-        }
+    scrollTo(e: Event, id?: string) {
+        this.navService.scrollTo(e, id);
     }
 }

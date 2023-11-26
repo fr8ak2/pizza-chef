@@ -49,10 +49,10 @@
         <pizza-pic
             *ngIf="product"
             [config]="{
-                path: product?.pic || '',
-                width: product?.width,
-                height: product?.height,
-                alt: product?.title,
+                path: product.pic || '',
+                width: product.width,
+                height: product.height,
+                alt: product.title,
                 lazy: picLoadingState
             }" />
     </div>

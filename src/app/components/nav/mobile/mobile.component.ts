@@ -2,6 +2,7 @@ import { Component, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavModel } from '@models/models';
 import { NavComponent } from '../nav.component';
+import { NavService } from '@services/services';
 
 @Component({
     selector: 'pizza-mobile',
@@ -14,30 +15,13 @@ import { NavComponent } from '../nav.component';
 export class MobileComponent implements OnDestroy {
     @Input() navMobileItems: NavModel[] = [];
 
-    isMenuOpen: boolean = false;
+    constructor(protected navService: NavService) {}
+
+    isMenuOpen = false;
 
     toggleMenu() {
         this.isMenuOpen = !this.isMenuOpen;
-        this.isMenuOpen ? this.lockScroll() : this.unlockScroll();
-    }
-
-    scrollTo(id: string): void {
-        const target = document.getElementById(id);
-
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        if (this.isMenuOpen) {
-            this.isMenuOpen = false;
-            this.unlockScroll();
-        }
-    }
-    lockScroll() {
-        document.body.classList.add('--prevent-scroll');
-    }
-    unlockScroll() {
-        document.body.classList.remove('--prevent-scroll');
+        this.isMenuOpen ? this.navService.lockScroll() : this.navService.unlockScroll();
     }
 
     ngOnDestroy() {
