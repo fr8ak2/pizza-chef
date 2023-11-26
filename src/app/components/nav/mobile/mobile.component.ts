@@ -16,10 +16,10 @@ export class MobileComponent implements OnDestroy {
 
     isMenuOpen: boolean = false;
 
-    toggleMenu = () => {
+    toggleMenu() {
         this.isMenuOpen = !this.isMenuOpen;
         this.isMenuOpen ? this.lockScroll() : this.unlockScroll();
-    };
+    }
 
     scrollTo(id: string): void {
         const target = document.getElementById(id);

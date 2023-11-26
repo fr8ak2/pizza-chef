@@ -1,6 +1,6 @@
 <nav class="menu">
     <div class="menu__items">
-        <div class="menu_item" *ngFor="let item of navItems">
+        <div class="menu_item" *ngFor="let item of navItems; let i = index">
             <a class="menu__item-link" [href]="'#' + item?.hash" (click)="scrollTo(item?.hash, $event)">
                 {{ item?.title }}
             </a>

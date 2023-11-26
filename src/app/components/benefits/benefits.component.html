@@ -1,6 +1,6 @@
 <div class="benefits">
     <div class="benefits__list">
-        <div class="benefits__item" *ngFor="let benefit of benefits">
+        <div class="benefits__item" *ngFor="let benefit of benefits; let i = index">
             <div class="benefits__item-icon">
                 <pizza-pic
                     [config]="{

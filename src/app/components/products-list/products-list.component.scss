@@ -18,9 +18,18 @@
 
         &-img {
             display: flex;
-            justify-content: center;
-            width: 100%;
+            width: calc(100% - #{rem(32px)});
             min-height: rem(160px);
+            cursor: zoom-in;
+
+            img {
+                display: block;
+                max-width: none;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
 
         &-inner {

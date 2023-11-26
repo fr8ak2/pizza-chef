@@ -41,6 +41,7 @@ export class FormComponent implements OnInit {
         private http: HttpClient,
         protected modalService: ModalService,
     ) {}
+
     ngOnInit() {
         this.form = new FormGroup({
             name: new FormControl(this.person.name, [
@@ -51,8 +52,6 @@ export class FormComponent implements OnInit {
             address: new FormControl(this.person.address, Validators.required),
             phone: new FormControl(this.person.phone, [Validators.required, Validators.pattern('[- +()0-9]+')]),
         });
-
-        //this.successTitle = `Дорогой ${this.form.value.name}, спасибо за ваш заказ!`;
     }
 
     get name() {

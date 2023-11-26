@@ -1,6 +1,6 @@
 <div class="products__list">
-    <div class="products__item" *ngFor="let product of products" [attr.data-id]="product.id">
-        <div class="products__item-img">
+    <div class="products__item" *ngFor="let product of products; let i = index" [attr.data-id]="product.id">
+        <div class="products__item-img" (click)="enlargeImage(product.id)" role="presentation">
             <pizza-pic
                 [config]="{
                     path: product?.pic || '',
@@ -43,3 +43,17 @@
         </div>
     </div>
 </div>
+
+<pizza-modal id="product">
+    <div class="popup__item">
+        <pizza-pic
+            *ngIf="product"
+            [config]="{
+                path: product?.pic || '',
+                width: product?.width,
+                height: product?.height,
+                alt: product?.title,
+                lazy: picLoadingState
+            }" />
+    </div>
+</pizza-modal>

@@ -16,8 +16,10 @@
         gap: rems(0 16px);
 
         &-icon {
+
             img {
                 max-width: none;
+                width: rem(60px);
             }
         }
     }
